@@ -1,6 +1,7 @@
 "Weslyn Wagner(zfs119): lab2.py, for Python3"
 
-f = open("c:\\Users\\cvall\\c.txt","r")
+f = open("c:\\Users\\cvall\\Desktop\\CloudComputing\\c.txt","r")
+
 
 origlist = f.readlines()
 dataDict ={}
@@ -19,7 +20,7 @@ for line in origlist:
         dataDict[date] = total
 
 f.close()
-
+"""
 def maxValue(dict):
     value = 0
     for key in dict:
@@ -35,11 +36,15 @@ def minValue(dict):
             value = dict[key]
             date = key
     return print("The min value is %s and occurs on %s" %(value,date))
-    
-maxValue(dataDict)
-minValue(dataDict)
+"""    
+
+maxValue= max(dataDict.values())
+minValue= min(dataDict.values())
+print("The max value is %s" %(maxValue))
+print("The min value is %s" %(minValue))
+
+
 
 sortedDict = sorted(dataDict.items())
 for i in sortedDict:
     print("%s: %s" %(i[0],i[1]))
-
